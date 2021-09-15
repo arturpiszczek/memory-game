@@ -1,0 +1,43 @@
+.info {
+  position: absolute;
+  top: 25%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.info article {
+  max-width: 30%;
+}
+
+.info h2 {
+  letter-spacing: 2px;
+}
+
+.info p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.info button {
+  width: 15rem;
+  height: 6rem;
+  padding: 1rem;
+  margin-top: 5rem;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  background-color: #2f492d;
+  border: none;
+  border-radius: 3rem;
+  box-shadow: 9px 16px 13px 5px #2f492db3;
+}
+
+.info button:hover,
+.info button:active {
+  color: #779c3f;
+  background-color: #2f492d;
+  cursor: pointer;
+}
