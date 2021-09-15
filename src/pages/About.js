@@ -1,3 +1,4 @@
+import StartGameButton from '../components/Layout/StartGameButton';
 import classes from './About.module.css';
 
 const About = () => {
@@ -20,7 +21,7 @@ const About = () => {
           wszystkie pary. Najlepsze wyniki trafiają na listę rankingową!
         </p>
       </article>
-      <button>Rozpocznij grę</button>
+      <StartGameButton />
     </section>
   );
 };

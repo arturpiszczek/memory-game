@@ -1,3 +1,4 @@
+import StartGameButton from '../components/Layout/StartGameButton';
 import classes from './Home.module.css';
 
 const Home = () => {
@@ -7,7 +8,7 @@ const Home = () => {
         <p>Zagraj w nową przeglądarkową grę online.</p>
         <p>Przekonaj się jak szybko uda Ci się rozwiązać zagadkę!</p>
       </article>
-      <button>Rozpocznij grę</button>
+      <StartGameButton />
     </section>
   );
 };

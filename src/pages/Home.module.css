@@ -11,23 +11,6 @@
   text-align: center;
 }
 
-.intro button {
-  width: 15rem;
-  height: 6rem;
-  padding: 1rem;
-  margin-top: 5rem;
-  color: #fff;
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.5rem;
-  background-color: #2f492d;
-  border: none;
-  border-radius: 3rem;
-  box-shadow: 9px 16px 13px 5px #2f492db3;
-}
-
-.intro button:hover,
-.intro button:active {
-  color: #779c3f;
-  background-color: #2f492d;
-  cursor: pointer;
+article {
+  margin-bottom: 5rem;
 }
