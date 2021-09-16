@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Ranking from './pages/Ranking';
 import Contact from './pages/Contact';
+import Game from './pages/Game';
 
 const App = () => {
   return (
@@ -26,6 +27,9 @@ const App = () => {
           </Route>
           <Route path="/contact">
             <Contact />
+          </Route>
+          <Route path="/play">
+            <Game />
           </Route>
         </Switch>
       </main>
