@@ -1,11 +1,12 @@
+import ChooseGame from '../components/ChooseGame';
 import classes from './Game.module.css';
 
 const Game = () => {
   return (
     <section className={classes.game}>
-      <p>Game page</p>
-    </section>    
-  );  
+      <ChooseGame />
+    </section>
+  );
 };
 
 export default Game;

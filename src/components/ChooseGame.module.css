@@ -1,0 +1,40 @@
+.choose {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  width: 30rem;
+  border: 3px solid #2f492d;
+  border-radius: 0 0 2rem 2rem;
+}
+
+.choose h2 {
+  width: 100%;
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #fff;
+  background-color: #2f492d;
+}
+
+.choose button {
+  width: 10rem;
+  height: 4rem;
+  margin: 2rem;
+  padding: 1rem;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  background-color: #2f492d;
+  border: none;
+  border-radius: 3rem;
+  box-shadow: 9px 16px 13px 5px #2f492db3;
+}
+
+.choose button:hover,
+.choose button:active {
+  color: #779c3f;
+  background-color: #2f492d;
+  cursor: pointer;
+}
