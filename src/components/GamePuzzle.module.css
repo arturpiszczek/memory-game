@@ -1,0 +1,20 @@
+.puzzle {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  padding: 1rem;
+  margin: 0.5rem;
+  color: #fff;
+  font-size: 1.5rem;
+  background-color: #2f492d;
+  border: 2px solid #fff;
+  border-radius: 1rem;
+  box-shadow: 9px 16px 13px 5px #2f492db3;  
+}
+
+.puzzle:hover {
+  cursor: pointer;
+}
