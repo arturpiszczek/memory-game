@@ -1,0 +1,5 @@
+.puzzles {
+  display: flex;
+  flex-wrap: wrap;
+  width: 30rem;
+}
