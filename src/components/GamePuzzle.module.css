@@ -12,9 +12,21 @@
   background-color: #2f492d;
   border: 2px solid #fff;
   border-radius: 1rem;
-  box-shadow: 9px 16px 13px 5px #2f492db3;  
+  box-shadow: 9px 16px 13px 5px #2f492db3;
+  transform: rotateY(0deg);
 }
 
 .puzzle:hover {
   cursor: pointer;
+}
+
+.clicked {
+  transform: rotateY(360deg);
+  transition: transform 500ms ease-out;
+}
+
+.hide {
+  transform: rotateY(360deg);
+  visibility: hidden;
+  transition: transform 500ms ease-out, visibility 1s ease-out;
 }
