@@ -1,25 +1,61 @@
+import { useState } from 'react';
+
 import GamePuzzle from './GamePuzzle';
 import classes from './GamePuzzles.module.css';
 
-const GamePuzzles = (props) => {
-  const puzzles = [];
+const initialPuzzles = [];
 
-  const createPuzzles = (amountOfPuzzles) => {
-    for (let i = 0; i < 2; i++) {
-      for (let j = 0; j < amountOfPuzzles / 2; j++) {
-        puzzles.push({ value: j, id: Math.random().toFixed(5) });
-      }
+const createPuzzles = (amountOfPuzzles) => {
+  for (let i = 0; i < 2; i++) {
+    for (let j = 0; j < amountOfPuzzles / 2; j++) {
+      initialPuzzles.push({ value: j, id: Math.random().toFixed(5), isVisible: true });
     }
-  };
+  }
+};
 
-  createPuzzles(props.elements);
+const GamePuzzles = (props) => {
+  createPuzzles(props.elements); 
+  const [puzzles, setPuzzles] = useState(initialPuzzles);
+
+  const clickedPuzzles = [];
+  const clickedPuzzlesIndex = [];
+
+  const comparePuzzlesHandler = (el, num) => {
+    let index;
+
+    if(clickedPuzzles.length > 1) {
+      clickedPuzzles.splice(0, 2);
+      clickedPuzzlesIndex.splice(0, 2);
+    }
+    
+    puzzles.some((puzzle, idx) => {
+      if (puzzle.id === el) {
+        index = idx;
+      }
+      return index;
+    });
+
+    clickedPuzzlesIndex.push(index);
+    clickedPuzzles.push(num);
+
+    if(clickedPuzzles[0] === clickedPuzzles[1]) {
+      setPuzzles((prevPuzzles) => {
+        prevPuzzles[clickedPuzzlesIndex[0]].isVisible = false;
+        prevPuzzles[clickedPuzzlesIndex[1]].isVisible = false;
+        return [...prevPuzzles];
+      })
+    }    
+  };  
 
   return (
-    <div className={classes.puzzles}>
+    <div className={classes.board}>
       {puzzles.map((puzzle) => (
         <GamePuzzle 
           key={puzzle.id}
+          id={puzzle.id}
           number={puzzle.value} 
+          visibility={puzzle.isVisible}
+          onCompare={comparePuzzlesHandler}
         />
       ))}
     </div>
