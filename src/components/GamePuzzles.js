@@ -8,14 +8,16 @@ const initialPuzzles = [];
 const createPuzzles = (amountOfPuzzles) => {
   for (let i = 0; i < 2; i++) {
     for (let j = 0; j < amountOfPuzzles / 2; j++) {
-      initialPuzzles.push({ value: j, id: Math.random().toFixed(5), isVisible: true, reverse: false });
+      initialPuzzles.push({ value: j, id: +Math.random().toFixed(6), isVisible: true, reverse: 0 });
     }
   }
+  initialPuzzles.sort((a,b) => (a.id > b.id) ? 1 : ((b.id > a.id) ? -1 : 0));
 };
 
 const GamePuzzles = (props) => {
   createPuzzles(props.elements); 
   const [puzzles, setPuzzles] = useState(initialPuzzles);  
+  console.log(puzzles);
 
   const clickedPuzzles = [];
   const clickedPuzzlesIndex = [];
@@ -49,8 +51,8 @@ const GamePuzzles = (props) => {
     if(clickedPuzzles.length === 2){
       if(clickedPuzzles[0] !== clickedPuzzles[1]) {        
         setPuzzles((prevPuzzles) => {
-          prevPuzzles[clickedPuzzlesIndex[0]].reverse = Math.random().toFixed(3);
-          prevPuzzles[clickedPuzzlesIndex[1]].reverse = Math.random().toFixed(3);
+          prevPuzzles[clickedPuzzlesIndex[0]].reverse = +Math.random().toFixed(3);
+          prevPuzzles[clickedPuzzlesIndex[1]].reverse = +Math.random().toFixed(3);
           return [...prevPuzzles];
         })      
       }      
