@@ -3,21 +3,20 @@ import { useState } from 'react';
 import GamePuzzle from './GamePuzzle';
 import classes from './GamePuzzles.module.css';
 
-const initialPuzzles = [];
-
-const createPuzzles = (amountOfPuzzles) => {
-  for (let i = 0; i < 2; i++) {
-    for (let j = 0; j < amountOfPuzzles / 2; j++) {
-      initialPuzzles.push({ value: j, id: +Math.random().toFixed(6), isVisible: true, reverse: 0 });
-    }
-  }
-  initialPuzzles.sort((a,b) => (a.id > b.id) ? 1 : ((b.id > a.id) ? -1 : 0));
-};
-
 const GamePuzzles = (props) => {
+  const initialPuzzles = [];
+
+  const createPuzzles = (amountOfPuzzles) => {
+    for (let i = 0; i < 2; i++) {
+      for (let j = 0; j < amountOfPuzzles / 2; j++) {
+        initialPuzzles.push({ value: j, id: +Math.random().toFixed(6), isVisible: true, reverse: 0 });
+      }
+    }
+    initialPuzzles.sort((a,b) => (a.id > b.id) ? 1 : ((b.id > a.id) ? -1 : 0));
+  };
+
   createPuzzles(props.elements); 
   const [puzzles, setPuzzles] = useState(initialPuzzles);  
-  console.log(puzzles);
 
   const clickedPuzzles = [];
   const clickedPuzzlesIndex = [];
