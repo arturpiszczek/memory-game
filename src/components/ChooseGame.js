@@ -1,8 +1,14 @@
+import { useDispatch } from 'react-redux';
+
+import { timeActions } from '../store/index';
 import classes from './ChooseGame.module.css';
 
 const ChooseGame = (props) => {
-  const chooseAmountHandler = event => {
-    props.onChoose(event.target.name);
+  const dispatch = useDispatch();
+
+  const chooseAmountHandler = event => {  
+    props.onChoose(+event.target.name);
+    dispatch(timeActions.addTime({ minutes: 0, seconds: 0 }));    
   };
 
   return (
