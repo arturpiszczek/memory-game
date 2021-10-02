@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 
+import { statusActions } from '../store/index';
 import GamePuzzle from './GamePuzzle';
 import classes from './GamePuzzles.module.css';
 
@@ -7,6 +9,8 @@ const GamePuzzles = (props) => {
   const initialPuzzles = [];
   const clickedPuzzles = [];
   const clickedPuzzlesIndex = [];  
+
+  const dispatch = useDispatch();
 
   const createPuzzles = (amountOfPuzzles) => {
     for (let i = 0; i < 2; i++) {
@@ -58,6 +62,9 @@ const GamePuzzles = (props) => {
   };  
 
   if (!puzzles.some(puzzle => puzzle.isVisible === true)) {
+    setTimeout(() => {
+      dispatch(statusActions.setAsFinished());      
+    }, 1000);    
     setTimeout(() => {
       props.onGameOver();
     }, 1000);
