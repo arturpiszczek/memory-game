@@ -21,11 +21,22 @@ const statusSlice = createSlice({
   }
 });
 
+const usernameSlice = createSlice({
+  name: 'username',
+  initialState: { username: '' },
+  reducers: {
+    addName(state, action) {
+      state.username = action.payload;
+    },
+  }
+});
+
 const store = configureStore({
-  reducer: { time: timeSlice.reducer, status: statusSlice.reducer },
+  reducer: { time: timeSlice.reducer, status: statusSlice.reducer, username: usernameSlice.reducer },
 });
 
 export const timeActions = timeSlice.actions;
 export const statusActions = statusSlice.actions;
+export const usernameActions = usernameSlice.actions;
 
 export default store;
