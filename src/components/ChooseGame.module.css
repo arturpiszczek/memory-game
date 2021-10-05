@@ -21,10 +21,9 @@
 .choose button {
   width: 10rem;
   height: 4rem;
-  margin: 2rem;
+  margin: 2rem 0;
   padding: 1rem;
   color: #fff;
-  font-family: 'Roboto', sans-serif;
   font-size: 1.5rem;
   background-color: #2f492d;
   border: none;
@@ -35,6 +34,5 @@
 .choose button:hover,
 .choose button:active {
   color: #779c3f;
-  background-color: #2f492d;
   cursor: pointer;
 }

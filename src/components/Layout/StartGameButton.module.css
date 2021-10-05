@@ -1,9 +1,10 @@
 .button {
   width: 15rem;
   height: 6rem;
+  margin: 0;
   padding: 1rem;
+  font: inherit;
   color: #fff;
-  font-family: 'Roboto', sans-serif;
   font-size: 1.5rem;
   background-color: #2f492d;
   border: none;
@@ -14,6 +15,5 @@
 .button:hover,
 .button:active {
   color: #779c3f;
-  background-color: #2f492d;
   cursor: pointer;
 }
