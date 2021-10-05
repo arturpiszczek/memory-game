@@ -15,9 +15,10 @@ const About = () => {
         </p>
         <h2>Jak grać:</h2>
         <p>
-          Aby rozpocząć naciśnij przycisk: Rozpocznij grę. Następnie wybierz liczbę par kart do dopasowania.
-          Rozmieszczenie kart na planszy generowane jest losowo. Odkrywaj
-          poszczególne karty aby dopasować pary. Aby ukończyć rozgrywkę dopasuj
+          Aby rozpocząć naciśnij przycisk: Rozpocznij grę.
+          Następnie podaj nazwę gracza i wybierz liczbę par kart do dopasowania.
+          Rozmieszczenie kart na planszy generowane jest losowo.
+          Odkrywaj poszczególne karty aby dopasować pary. Żeby ukończyć rozgrywkę dopasuj
           wszystkie pary. Najlepsze wyniki trafiają na listę rankingową!
         </p>
       </article>
