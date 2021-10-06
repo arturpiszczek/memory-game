@@ -10,10 +10,14 @@
   border: none;
   border-radius: 3rem;
   box-shadow: 9px 16px 13px 5px #2f492db3;
+  transition: transform 0.5s ease;  
 }
 
 .button:hover,
 .button:active {
   color: #779c3f;
   cursor: pointer;
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);   
 }

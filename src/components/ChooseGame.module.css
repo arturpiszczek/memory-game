@@ -6,6 +6,7 @@
   width: 30rem;
   border: 3px solid #2f492d;
   border-radius: 0 0 2rem 2rem;
+  box-shadow: 9px 16px 13px 5px #2f492db3;
 }
 
 .choose h2 {
@@ -29,10 +30,14 @@
   border: none;
   border-radius: 3rem;
   box-shadow: 9px 16px 13px 5px #2f492db3;
+  transition: transform 0.5s ease;  
 }
 
 .choose button:hover,
 .choose button:active {
   color: #779c3f;
   cursor: pointer;
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9); 
 }
