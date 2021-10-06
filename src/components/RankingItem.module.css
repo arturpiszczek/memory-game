@@ -1,0 +1,32 @@
+.rankingItem {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.2rem;
+  border-radius: 0.5rem;
+  background-color: #2f492d;
+  box-shadow: 9px 16px 13px 5px #2f492db3;
+  transition: transform 0.5s ease;  
+}
+
+.rankingItem:hover {
+  color: #779c3f;
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);  
+}
+
+.rankNum {
+  width: 3.5rem;
+  padding: 1rem;
+}
+
+.player {
+  width: 15rem;
+  padding: 1rem;
+}
+
+.time {
+  width: 8rem;
+  padding: 1rem;
+}
