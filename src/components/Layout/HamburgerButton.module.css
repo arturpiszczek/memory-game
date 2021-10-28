@@ -1,0 +1,29 @@
+.hamburgerBtn {
+  display: none;
+  width: 2rem;
+  padding: 0;  
+  border: none;
+  border-radius: 1rem;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+}
+
+.hamburgerBtn:focus {
+  outline-style: inherit;  
+}
+  
+.hamburgerBtn span {
+  width: 100%;
+  height: 0.2rem;
+  display: block;
+  margin: 0.6rem 0;
+  background-color: #fff;
+}
+
+@media (max-width: 640px) {
+  .hamburgerBtn {
+    display: block;
+  }
+}
+  
