@@ -31,12 +31,23 @@ const usernameSlice = createSlice({
   }
 });
 
+const mobileNavSlice = createSlice({
+  name: 'mobileNav',
+  initialState: { isOpen: false },
+  reducers: {
+    toggleVisibility(state) {
+      state.isOpen = !state.isOpen;
+    },
+  }
+});
+
 const store = configureStore({
-  reducer: { time: timeSlice.reducer, status: statusSlice.reducer, username: usernameSlice.reducer },
+  reducer: { time: timeSlice.reducer, status: statusSlice.reducer, username: usernameSlice.reducer, mobileNav: mobileNavSlice.reducer },
 });
 
 export const timeActions = timeSlice.actions;
 export const statusActions = statusSlice.actions;
 export const usernameActions = usernameSlice.actions;
+export const mobileNavActions = mobileNavSlice.actions;
 
 export default store;
