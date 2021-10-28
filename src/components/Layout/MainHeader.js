@@ -1,18 +1,20 @@
 import { NavLink } from 'react-router-dom';
 
+import HamburgerButton from './HamburgerButton';
 import classes from './MainHeader.module.css';
 
 const MainHeader = () => {
   return (
     <header className={classes.header}>
       <h1>Memory Game</h1>
-      <nav>
+      <HamburgerButton />
+      <nav className={classes.nav}>
         <ul>
-        <li>
+          <li>
             <NavLink activeClassName={classes.active} to="/home">
               Start
             </NavLink>
-          </li>          
+          </li>
           <li>
             <NavLink activeClassName={classes.active} to="/about">
               O Grze
