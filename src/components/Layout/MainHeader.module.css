@@ -19,27 +19,33 @@ h1 {
   margin: 0;
 }
 
-.header ul {
+.nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.header li {
+.nav li {
   display: inline-block;
   margin: 0 1rem;
 }
 
-.header a {
+.nav a {
   color: #fff;
   text-decoration: none;
 }
 
-.header a:hover,
-.header a:active,
-.header a.active {
+.nav a:hover,
+.nav a:active,
+.nav a.active {
   color: #779c3f;
   cursor: pointer;
   padding-bottom: 0.25rem;
   border-bottom: 4px solid #779c3f;  
 }
+
+@media (max-width: 640px) {
+  .nav {
+    display: none;
+  }
+} 
